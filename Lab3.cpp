@@ -43,7 +43,6 @@ bool Arrays1DAreEqual(char* expectedarr, char* arr2)
 }
 int main()
 {
-
 	float mark = 10;
 	int replace = 0;
 	int falldown = 0;
@@ -331,5 +330,25 @@ int main()
 
 	cout << endl << " Score = " << mark << endl;
 	cout << "Individuals Marks 10," << replace << "," << falldown << "," << varsall << "," << varsScope << " End";
+	
+	
+	
+	//Part 3 checking
+	
+	int dataQuestion1[10] = { 5,2,5,6,21,10 };
+	DrawGraph(dataQuestion1);
+
+	int dataQuestion2[10] = { 5,2,5,6,21,10 };
+	char graphedData[100][100];
+	FillGraph2dArray(dataQuestion2, graphedData);
+
+	for (int i = 0; i < 100; i++)
+	{
+		for (int x = 0; x < 100; x++)
+		{
+			cout << graphedData[i][x];
+		}
+		cout << endl;
+	}
 
 }
