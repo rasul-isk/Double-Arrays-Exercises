@@ -339,3 +339,63 @@ void FindAllVariablesInScope(char variables[1000], char code[1000], int lineNumb
 	}
 	cout << "Result is " << variables;
 }
+
+void DrawGraph(int data[10])
+{
+	int size = data[0];
+	int* arr = new int[size];
+
+	for (int indexData = 1; indexData <= size; indexData++)
+	{
+		if (data[indexData] <= 20 && data[indexData] >= 1)  
+			arr[indexData - 1] = data[indexData];
+		else
+			arr[indexData - 1] = 0;
+	}
+
+	for (int raw = 0; raw < size; raw++)
+	{
+
+		for (int column = 0; column < arr[raw]; column++)
+		{
+			cout << "X";
+		}
+		cout << endl;
+	}
+
+	cout << endl << endl;
+}
+
+void FillGraph2dArray(int data[10], char graphedData[100][100])
+{
+	int size = data[0];
+	int* arr = new int[size];
+
+	for (int indexData = 1; indexData <= size; indexData++)
+	{
+		if (data[indexData] <= 20 && data[indexData] >= 1)
+			arr[indexData - 1] = data[indexData];
+		else
+			arr[indexData - 1] = 0;
+	}
+
+	for (int raw = 0; raw < 100; raw++)
+	{
+		int column = 0;
+
+		if (raw < size)
+		{
+			while (column < arr[raw])
+			{
+				graphedData[raw][column++] = 'X';
+			}
+		}
+
+		while (column < 100)
+		{
+			graphedData[raw][column++] = ' ';
+		}
+	}
+	
+	cout << endl << endl;
+}
