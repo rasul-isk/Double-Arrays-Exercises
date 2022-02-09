@@ -76,3 +76,48 @@ FindAllVariables(variables ,code);
 2) void FindVariablesInScope(char variables[], char code[], int lineNumber) 
 
 Find variables in scope after a particular line number.  The code won’t contain “for” loops. Only variables of type “int” and “char” need be included. Only one variable is declared per line. The only function declaration in the code is “int main()”. 
+
+# Part 3:  Draw Graphs
+
+1) void DrawGraph(int data[10])
+
+Element at position 0 contains the number of datapoints. The datapoints start from position 1. Each datapoint can be an integer between 1 and 20. Draw a horizontal graph of 'X's with a newline after each line. 
+
+Example :
+
+int data[10] = { 3,2,5,6 };
+DrawGraph(data);
+
+Output:
+XX
+XXXXX
+XXXXXX
+
+2) FillGraph2dArray(data, graphedData);
+
+Fill each location in the array graphedData with an'X' or a space ' ' based on the number in data array which will contain number of "X" for each line. Element at position 0 contains the number of datapoints. Each datapoint can be an integer between 1 and 20. The datapoints start from position 1 of data array.
+
+Example :
+int data[10] = { 3,2,5,6 };
+char graphedData[100][100];
+FillGraph2dArray(data, graphedData);
+graphedData now contains:
+ 
+graphedData[0][0] = ‘X’
+graphedData[0][1] = ‘X’
+graphedData[0][2...100] = ‘ ’
+
+graphedData[1][0] = ‘X’
+graphedData[1][1] = ‘X’
+graphedData[1][2] = ‘X’
+graphedData[1][3] = ‘X’
+graphedData[1][4] = ‘X’
+graphedData[1][5...100] = ‘ ’
+
+graphedData[2][0] = ‘X’
+graphedData[2][1] = ‘X’
+graphedData[2][2] = ‘X’
+graphedData[2][3] = ‘X’
+graphedData[2][4] = ‘X’
+graphedData[2][5] = ‘X’
+graphedData[2...100][6...100] = ‘ ’
